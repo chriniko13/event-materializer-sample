@@ -34,7 +34,7 @@ public class PostKafkaBuilder extends Builder<Post, String, String> {
                             PostEventCalculator postEventCalculator) {
         super(buffer);
         this.postEventCalculator = postEventCalculator;
-        consumer = createConsumer(getInitialOffset());
+        this.consumer = createConsumer(this.offset);
     }
 
     @Override
@@ -68,7 +68,7 @@ public class PostKafkaBuilder extends Builder<Post, String, String> {
             });
         }
 
-        return getInitialOffset();
+        return this.offset;
     }
 
     private Consumer<String, PostEvent> createConsumer(String groupId) {
