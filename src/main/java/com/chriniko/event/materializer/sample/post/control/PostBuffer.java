@@ -1,10 +1,10 @@
 package com.chriniko.event.materializer.sample.post.control;
 
 import com.chriniko.event.materializer.sample.core.Buffer;
+import com.chriniko.event.materializer.sample.core.NotThreadSafe;
 import com.chriniko.event.materializer.sample.post.domain.Post;
 import lombok.extern.log4j.Log4j2;
 
-import javax.annotation.concurrent.NotThreadSafe;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
